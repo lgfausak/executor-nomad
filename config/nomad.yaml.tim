@@ -10,6 +10,7 @@
         "Priority": null,
         "AllAtOnce": null,
         "Datacenters": [
+            "slk",
             "rocklin",
             "twinsburg",
             "southlake",
@@ -73,8 +74,8 @@
                             }
                         ],
                         "Resources": {
-                            "CPU": 2000,
-                            "MemoryMB": 4096,
+                            "CPU": 20,
+                            "MemoryMB": 100,
                             "DiskMB": null,
                             "IOPS": null,
                             "Networks": null

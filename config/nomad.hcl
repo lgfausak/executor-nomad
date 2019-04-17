@@ -8,7 +8,7 @@
 #
 # and, we have a template to build a template, groovy, right?
 # cd config
-# ( unset VAULT_TOKEN jt nomad.hcl '{"dc":["rocklin","twinsburg","southlake","branchburg","coloradosprings","arlington"],"build_id_with_prefix":"{{build_id_with_prefix}}","launcher_version":"{{launcher_version}}","api_uri":"{{api_uri}}","store_uri":"{{store_uri}}","build_id":"{{build_id}}","container":"{{container}}","token":"{{token}}","build_prefix":"{{build_prefix}}","build_timeout":"{{build_timeout}}"}' | nomad run -output - > nomad.yaml.tim )
+# ( unset VAULT_TOKEN jt nomad.hcl '{"dc":["slk","rocklin","twinsburg","southlake","branchburg","coloradosprings","arlington"],"build_id_with_prefix":"{{build_id_with_prefix}}","launcher_version":"{{launcher_version}}","api_uri":"{{api_uri}}","store_uri":"{{store_uri}}","build_id":"{{build_id}}","container":"{{container}}","token":"{{token}}","build_prefix":"{{build_prefix}}","build_timeout":"{{build_timeout}}"}' | nomad run -output - > nomad.yaml.tim )
 # 
 # I copied the kubernetes executor and modified the template.  Very similar.
 #
@@ -65,8 +65,8 @@ docker rm $id
       }
 
       resources {
-        cpu = 2000
-        memory = 4096
+        cpu = 20
+        memory = 100
       }
 
       service {
